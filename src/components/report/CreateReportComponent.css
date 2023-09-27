@@ -1,0 +1,46 @@
+.create-report-form {
+  max-width: 400px;
+  /* margin: 0 auto; */
+  margin-left: 20rem;
+  padding: 30px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+}
+
+.custom-create-report-button {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.custom-border {
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  /* padding: 10px; */
+  margin-bottom: 10px;
+}
+
+.custom-form-control {
+  width: 200%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(216, 216, 214);
+}
+
+/* Center the button within the form */
+button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+}
+/* .container {
+  margin-left: 0rem;
+} */
+.custom-create-report-button {
+  margin-top: 10%;
+  margin-left: 11rem;
+}
+
+.form-control {
+  background-color: #ccc;
+}
