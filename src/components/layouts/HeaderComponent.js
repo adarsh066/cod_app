@@ -29,20 +29,20 @@ class HeaderComponent extends React.Component {
               <button className="navbardropbtn">Test Management</button>
               <div className="navbardrop-content">
                 <div>
-                  <a
-                    href="create-technology.html"
+                  <Link
+                    to="/createtechnology"
                     className="create-technology-button"
                   >
                     Create Technology
-                  </a>
+                  </Link>
                 </div>
                 <div>
-                  <a
-                    href="list-question.html"
+                  <Link
+                    to="/listoftechnology"
                     className="list-technology-button"
                   >
-                    List Question
-                  </a>
+                    List Of Technology
+                  </Link>
                 </div>
                 {/* <div><a href="create-test.html" className="create-test-button">Create Test</a></div> */}
 

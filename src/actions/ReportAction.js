@@ -1,10 +1,5 @@
 import axios from "axios";
-import {
-  DELETE_REPORT,
-  GET_ERRORS,
-  GET_REPORT,
-  GET_REPORTS,
-} from "./ReportTypes";
+import { DELETE_REPORT, GET_ERRORS, GET_REPORT, GET_REPORTS } from "./types";
 
 export const createReport = (report, navigate) => async (dispatch) => {
   try {

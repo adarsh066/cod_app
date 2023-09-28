@@ -1,4 +1,4 @@
-import { DELETE_REPORT, GET_REPORT, GET_REPORTS } from "../actions/ReportTypes";
+import { DELETE_REPORT, GET_REPORT, GET_REPORTS } from "../actions/types";
 
 const initialState = {
   reports: [],

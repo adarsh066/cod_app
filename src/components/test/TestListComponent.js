@@ -3,6 +3,7 @@ import TestListItemComponent from "./TestListItemComponent";
 // import '../test/TestListComponent.css';
 import { getTests } from "../../actions/TestAction";
 import {connect} from "react-redux";
+import PropTypes from "prop-types";
 
 class TestListComponent extends React.Component{
  componentDidMount(){
@@ -39,6 +40,11 @@ class TestListComponent extends React.Component{
         );
     }
 }
+
+TestListComponent.propTypes={
+    getTests:PropTypes.func.isRequired,
+}
+
 const mapStateToProps=(state)=>({
     tests:state.tests,
 })

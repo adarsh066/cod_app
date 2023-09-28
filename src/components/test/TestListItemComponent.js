@@ -1,7 +1,15 @@
 import React from "react";
 import "../test/TestListItemComponent.css";
+import { connect } from "react-redux";
+import { deleteTest } from "../../actions/TestAction";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 class TestListItemComponent extends React.Component {
+  onDeleteClick = (id) => {
+    this.props.deleteTest(id);
+  };
+
   render() {
     const { test } = this.props;
     return (
@@ -16,20 +24,17 @@ class TestListItemComponent extends React.Component {
               <p>{test.testdescription}</p>
             </div>
             <div className="col-md-4 d-none d-lg-block">
-              {/* <ul className="list-group"> */}
-              <ul className=" custom-flex-box col-lm-4">
-                {/* <a href="#">
-                                <li className="list-group-item board">
-                                    <i className="fa fa-flag-checkered pr-1">Project Board </i>
-                                </li>
-                            </a> */}
-                <a href="#">
+              <ul className="custom-flex-box col-lm-4">
+                <Link to={`/updateTest/${test.testIdentifier}`}>
                   <li className="list-group-item update">
                     <i className="fa fa-edit pr-1 ">Update Test</i>
                   </li>
-                </a>
+                </Link>
                 <a href="">
-                  <li className="list-group-item delete red">
+                  <li
+                    className="list-group-item delete red"
+                    onClick={this.onDeleteClick.bind(this, test.testIdentifier)}
+                  >
                     <i className="fa fa-minus-circle pr-1">Delete Test</i>
                   </li>
                 </a>
@@ -41,4 +46,9 @@ class TestListItemComponent extends React.Component {
     );
   }
 }
-export default TestListItemComponent;
+
+TestListItemComponent.propTypes = {
+  deleteTest: PropTypes.func.isRequired,
+};
+
+export default connect(null, { deleteTest })(TestListItemComponent);
